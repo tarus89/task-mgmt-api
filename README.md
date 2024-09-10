@@ -87,7 +87,6 @@ This is a simple **Task Management System API** built with **Laravel 11 as Lumen
 
     Request:
 
-        ```bash
         {
         "email": "testuser@gmail.com",
         "password": "1234"
@@ -96,7 +95,6 @@ This is a simple **Task Management System API** built with **Laravel 11 as Lumen
 
    Response:
 
-        ```bash
         {
             "token": "user-sanctum-api-token"
         }
@@ -115,7 +113,6 @@ This is a simple **Task Management System API** built with **Laravel 11 as Lumen
 
    Request Body: 
 
-    ```bash 
        { 
           "email": "user@example.com", 
           "password": "password" 
@@ -126,52 +123,50 @@ Response:
 ```{ "token": "user-sanctum-api-token" }```
 
 ### Tasks
-Get All Tasks: (GET ```/api/tasks```)
+* Get All Tasks: (GET ```/api/tasks```)
 
+* Get a Specific Task: (GET ```/api/tasks/{id}```)
 
-Get a Specific Task: (GET ```/api/tasks/{id}```)
+* Create a Task: (POST ```/api/tasks```)
 
-Create a Task: (POST ```/api/tasks```)
+   Request Body:
+         
+        {
+             "title": "Task title",
+             "description": "Task description",
+             "status": "pending",
+             "due_date": "2024-12-01"
+         }
 
-Request Body:
+* Update a Task: (PUT ```/api/tasks/{id}```)
 
-    ```bash 
-     {
-        "title": "Task title",
-        "description": "Task description",
-        "status": "pending",
-        "due_date": "2024-12-01"
-     }
+    Request Body:
 
-Update a Task: (PUT ```/api/tasks/{id}```)
+        {
+          "title": "Updated title"
+          "status": "completed"
+        }
 
-Request Body:
+* Delete a Task (Soft Delete): 
 
-     {
-        "title": "Updated title"
-        "status": "completed"
-     }
+    DELETE: ```/api/tasks/{id}```
 
-Delete a Task (Soft Delete): 
-
-DELETE: ```/api/tasks/{id}```
-
-* Tasks are soft-deleted, meaning they are not permanently removed from the database.
+``Tasks are soft-deleted, meaning they are not permanently removed from the database.``
 
 ### Task Filtering, Pagination, and Search
 
-Filtering by status (e.g., pending, completed):
+* Filtering by status (e.g., pending, completed):
 
    ``` GET: /api/tasks?status=pending```
 
-Filtering by due date:
+* Filtering by due date:
 
-``` GET: /api/tasks?due_date=2024-12-01```
+    ``` GET: /api/tasks?due_date=2024-12-01```
 
-Search by title:
+* Search by title:
 
-``` GET: /api/tasks?search=important```
+    ``` GET: /api/tasks?search=important```
 
-Paginate results (10 per page):
+* Paginate results (10 per page):
 
-``` GET: /api/tasks?page=1```
+    ``` GET: /api/tasks?page=1```
