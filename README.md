@@ -35,8 +35,8 @@ This is a simple **Task Management System API** built with **Laravel 11 as Lumen
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/task-management-system.git
-   cd task-management-system
+   git clone https://github.com/tarus89/task-mgmt-api.git
+   cd task-mgmt-api
    
 2. **Install Composer dependencies:**
 
