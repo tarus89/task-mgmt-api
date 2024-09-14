@@ -1,6 +1,6 @@
 # Task Management System API
 
-This is a simple **Task Management System API** built with **Laravel 11, Lumen is no longer Supported beyond Laravel 10**. 
+This is a simple **Task Management System API** built with **Laravel 11** (**Lumen** is no longer Supported beyond **Laravel 10**). 
 <br>The API allows users to manage tasks with basic **CRUD** operations, supports **soft deletes**, and includes features like task filtering, pagination, and search functionality.
 
 ## Table of Contents
