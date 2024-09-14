@@ -36,6 +36,7 @@ This is a simple **Task Management System API** built with **Laravel 11** (**Lum
 
    ```bash
    git clone https://github.com/tarus89/task-mgmt-api.git
+   git clone https://gitlab.com/tarus/task-mgmt-api.git
    cd task-mgmt-api
    
 2. **Install Composer dependencies:**
